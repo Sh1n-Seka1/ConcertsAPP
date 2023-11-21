@@ -1,4 +1,3 @@
-// Exemple de données (à remplacer par des données réelles)
 const concertsData = [
     { artist: 'Tiakola', venue: 'Paris', date: 'Lundi-12-Janvier-2024', image: 'https://img.lemde.fr/2023/02/09/0/0/3508/4680/664/0/75/0/2974418_1675948381389-07-04-2022-070422-tiakola-0748copy.jpg' },
     { artist: 'Gazo', venue: 'Paris', date: 'Samedi-12-Décembre-2023', image: 'https://rosefestival.fr/wp-content/uploads/GAZO-ROSE-FESTIVAL-TOULOUSE-1000x962.jpg' },
@@ -9,7 +8,6 @@ const concertsData = [
 
 function displayConcerts(concerts) {
     const concertList = document.getElementById('concertList');
-    // Effacez la liste actuelle avant d'afficher les concerts filtrés
     concertList.innerHTML = '';
 
     concerts.forEach(concert => {
@@ -30,8 +28,6 @@ function displayConcerts(concerts) {
         concertList.appendChild(card);
     });
 }
-
-// Fonction pour filtrer les concerts
 function filterConcerts() {
     const venueFilter = document.getElementById('venueFilter');
     const selectedVenue = venueFilter.value;
@@ -43,8 +39,6 @@ function filterConcerts() {
         displayConcerts(filteredConcerts);
     }
 }
-
-// Appel de la fonction pour afficher tous les concerts au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
     displayConcerts(concertsData);
 });
